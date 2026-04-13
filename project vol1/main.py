@@ -116,12 +116,12 @@ def edit(id:int):
         if (post["sex"] != "Male") | (post['sex'] != "Female"):
             # error 
             pass
-
-        if ((post["id"] != data["Id"]) & (post["dob"] != data["Date of Birth"])) | ((post["id"] != data["Id"]) & (post["age"] != data["Age"])) | ((post["Date of Birth"] != data["Dob"] )& (post["age"] != data["Age"])):
+        print()
+        if ((post["id"] != data["Id"]) & (post["dob"] != data["Date of Birth"])) | ((post["id"] != data["Id"]) & (post["age"] != data["Age"])) | ((post["dob"] != data["Date of Birth"] )& (post["age"] != data["Age"])):
             #error
             pass
 
-        if post["id"] != data["id"]:
+        if post["id"] != data["Id"]:
             if (post["id"].len() != 9) | (post["id"].len() != 10):
                 #error
                 pass
