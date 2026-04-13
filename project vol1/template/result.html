@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <form action="" method="post">
+        <h1>{% block title %} Results for file {{filename}} {% endblock %}</h1><br>
+        {{result}}<br><br>
+        <input class="btn btn-outline-warning" type="submit" name="btn" value="Back">
+    </form>
+{% endblock %}

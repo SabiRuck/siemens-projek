@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+      <h1>{% block title %} Order {% endblock %}</h1>
+      <br>
+      <h3>Please fill form to make appointment with the doctor</h3><br>
+      <form action="" method="post">
+        <input type="text" placeholder="Name" name="name" value="{{ request.form.name }}"><br>
+        <input type="text" placeholder="Surname" name="surname" value="{{ request.form.surname }}"><br>
+        <input type="text" placeholder="Identification Number" name="id" value="{{ request.form.id }}"><br>
+        <input class="btn btn-default" type="submit" value="Submit">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+      {% if success %}
+        <p class="success"><strong>Success:</strong> {{ success }}
+      {% endif %}
+{% endblock %}

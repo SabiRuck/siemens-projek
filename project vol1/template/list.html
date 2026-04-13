@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+    <form action="" method="post">
+        <h1>{% block title %} List of Appointments {% endblock %}</h1><br>
+
+
+        {%for i in range(0, len)%}
+        
+            <a href="edit/{{i}}"> {{Patients[i]}}</a> &ensp;&ensp;&ensp;
+            <button type="submit" class="btn btn-outline-danger" name="btn" value="{{i}}">Delete</button><br><br>
+        {%endfor%}
+    </form>
+      {% if error %}
+            <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1>{% block title %} Patient Info {% endblock %}</h1><br>
+        <form action="" method="post">
+            <label for="fname">Name:</label><br>
+            <input type="text" id="fname" name="name" value="{{ name }}"><br>
+            <label for="sname">Surname:</label><br>
+            <input type="text" id="sname" name="surname" value="{{ Surname }}"><br>
+            <label for="inumber">Identification Number:</label><br>
+            <input type="text" id="inumber" name="id" value="{{ Id }}"><br>
+            <label for="s">Sex:</label><br>
+            <input type="text" id="s" name="sex" value="{{ Sex }}"><br>
+            <label for="birth">Date of Birth:</label><br>
+            <input type="text" id="birth" name="dob" value="{{ Dob }}"><br>
+            <label for="old">Age:</label><br>
+            <input type="text" id="old" name="age" value="{{ Age }}"><br><br>
+            <input class="btn btn-outline-success" type="submit" name="btn" value="Save">
+            <input class="btn btn-outline-warning" type="submit" name="btn" value="Cancel">
+        </form>
+        {% if error %}
+            <p class="error"><strong>Error:</strong> {{ error }}
+        {% endif %}
+        {% if success %}
+            <p class="success"><strong>Success:</strong> {{ success }}
+        {% endif %}
+{% endblock %}

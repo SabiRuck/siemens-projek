@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Welcome {% endblock %}</h1>{{who}}<br>
+    
+    <div style="text-align: center;">
+
+    <img src="{{url_for('static', filename='bg1.png')}}" width="800" height="auto"/>
+    
+    </div>
+{% endblock %}
